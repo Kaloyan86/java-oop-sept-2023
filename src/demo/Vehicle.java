@@ -1,6 +1,6 @@
-package inheritance.inheritance_demo;
+package demo;
 
-public class Vehicle {
+public abstract class Vehicle {
 
     private String make;
     private String color;

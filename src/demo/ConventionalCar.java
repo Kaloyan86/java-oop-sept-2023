@@ -1,4 +1,4 @@
-package inheritance.inheritance_demo;
+package demo;
 
 public class ConventionalCar extends Car {
 

@@ -15,7 +15,8 @@ public class Main {
                     case "Dog":
                         String[] tokens = scanner.nextLine().split("\\s+");
                         Dog dog = new Dog(tokens[0], Integer.parseInt(tokens[1]), tokens[2]);
-                        System.out.println(dog);
+                        System.out.println(dog.getClass().getSimpleName());
+//                        System.out.println(dog);
                         break;
                     case "Cat":
                         tokens = scanner.nextLine().split("\\s+");

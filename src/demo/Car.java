@@ -1,6 +1,6 @@
-package inheritance.inheritance_demo;
+package demo;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Driveable {
 
     private String type; // coupe, sedan, estate car, van...
 
@@ -15,5 +15,14 @@ public class Car extends Vehicle {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public void drive() {
+        System.out.println("You are driving a car!");
+    }
+
+    public String getCarRemainingKm(int km) {
+        return "Car " + Driveable.getRemainingKm(km);
     }
 }
