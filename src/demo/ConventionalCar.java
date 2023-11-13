@@ -8,4 +8,9 @@ public class ConventionalCar extends Car {
         super(make, color, year, model, type);
         this.engine = new Engine();
     }
+
+    @Override
+    public String toString() {
+      return   String.format("%s Conventional car", super.toString());
+    }
 }

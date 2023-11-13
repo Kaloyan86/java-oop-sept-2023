@@ -22,6 +22,14 @@ public class Car extends Vehicle implements Driveable {
         System.out.println("You are driving a car!");
     }
 
+    public void drive(int km) {
+        System.out.println("You are driving a car!");
+    }
+
+    public void drive(int km, String destination) {
+        System.out.println("You are driving a car!");
+    }
+
     public String getCarRemainingKm(int km) {
         return "Car " + Driveable.getRemainingKm(km);
     }
