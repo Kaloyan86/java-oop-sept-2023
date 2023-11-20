@@ -1,13 +1,14 @@
 package robotService.repositories;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import robotService.entities.supplements.Supplement;
 
 public class SupplementRepository implements Repository {
 
-    private List<Supplement> supplements;
+    private Collection<Supplement> supplements;
 
     public SupplementRepository() {
         this.supplements = new ArrayList<>();

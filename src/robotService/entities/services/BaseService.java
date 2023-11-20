@@ -1,6 +1,7 @@
 package robotService.entities.services;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,8 +17,8 @@ public abstract class BaseService implements Service {
 
     private String name;
     private int capacity;
-    private List<Supplement> supplements;
-    private List<Robot> robots;
+    private Collection<Supplement> supplements;
+    private Collection<Robot> robots;
 
     public BaseService(String name, int capacity) {
         this.setName(name);
@@ -27,17 +28,16 @@ public abstract class BaseService implements Service {
     }
 
     @Override
-    public List<Robot> getRobots() {
-        return Collections.unmodifiableList(this.robots);
+    public Collection<Robot> getRobots() {
+        return Collections.unmodifiableCollection(this.robots);
     }
 
     @Override
-    public List<Supplement> getSupplements() {
-        return Collections.unmodifiableList(this.supplements);
+    public Collection<Supplement> getSupplements() {
+        return Collections.unmodifiableCollection(this.supplements);
     }
 
     @Override
-
     public String getStatistics() {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("%s %s:\n", this.name, this.getClass().getSimpleName()));
@@ -53,7 +53,7 @@ public abstract class BaseService implements Service {
         }
         sb.append(System.lineSeparator());
 
-        sb.append(String.format("Supplements: %d Hardness: %d\n", this.supplements.size(), sumHardness()));
+        sb.append(String.format("Supplements: %d Hardness: %d", this.supplements.size(), sumHardness()));
         return sb.toString();
     }
 
